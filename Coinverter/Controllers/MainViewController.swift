@@ -24,10 +24,10 @@ class MainViewController: UIViewController {
         
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        guard amountToConvert.text != nil else {return}
-    }
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        guard amountToConvertString == amountToConvert.text != nil else {return}
+//    }
 
     @IBOutlet weak var amountToConvert: UITextField!
     

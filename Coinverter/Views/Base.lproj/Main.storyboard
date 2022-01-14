@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -82,11 +83,10 @@
                                         <rect key="frame" x="0.0" y="636.66666666666663" width="428" height="211.33333333333337"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfq-kF-GsD">
-                                                <rect key="frame" x="113.66666666666669" y="67.666666666666742" width="201" height="76.333333333333314"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Convert">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="52"/>
-                                                </buttonConfiguration>
+                                                <rect key="frame" x="125.66666666666669" y="68.333333333333371" width="177" height="75"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Convert"/>
                                                 <connections>
                                                     <action selector="convertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a2B-74-BIq"/>
                                                 </connections>
@@ -185,11 +185,10 @@
                                         <rect key="frame" x="0.0" y="525.33333333333337" width="428" height="312.66666666666663"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ3-FH-Au8">
-                                                <rect key="frame" x="158.66666666666666" y="128.33333333333326" width="110.99999999999997" height="56"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted" title="Share">
-                                                    <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
-                                                </buttonConfiguration>
+                                                <rect key="frame" x="170.66666666666666" y="129.33333333333326" width="86.999999999999972" height="54"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Share"/>
                                                 <connections>
                                                     <action selector="shareButtonTapped:" destination="Sa8-3k-XAj" eventType="touchUpInside" id="0Pn-Ak-ztf"/>
                                                 </connections>
