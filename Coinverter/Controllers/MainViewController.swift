@@ -11,6 +11,8 @@ class MainViewController: UIViewController {
     
     private let coinverterManager = CoinverterManager()
     private var amountToConvertString = ""
+    private var initialCurrency = "EUR"
+    private var resultCurrency = "EUR"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class MainViewController: UIViewController {
     
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
-//        guard amountToConvertString == amountToConvert.text != nil else {return}
+//        amountToConvertString = amountToConvert.text ?? "0.0"
 //    }
 
     @IBOutlet weak var amountToConvert: UITextField!
@@ -36,8 +38,16 @@ class MainViewController: UIViewController {
     @IBOutlet weak var outputCurrencyPicker: UIPickerView!
     
     @IBAction func convertButton(_ sender: UIButton) {
-        coinverterManager.convertCalculations(amountToConvertString)
-        performSegue(withIdentifier: "resultSegue", sender: self)
+        if amountToConvert.text != "" {
+            coinverterManager.getRates()
+            amountToConvertString = amountToConvert.text ?? "0.0"
+            coinverterManager.convertCalculations(amountToConvertString)
+            performSegue(withIdentifier: "resultSegue", sender: self)
+        } else {
+            let alert = UIAlertController(title: "Invalid value", message: "Please enter amount of money", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,6 +55,8 @@ class MainViewController: UIViewController {
             let destinationVC = segue.destination as! ResultViewController
             destinationVC.initialCurrencyValue = amountToConvertString
             destinationVC.resultCurrencyValue = coinverterManager.roundedResult
+            destinationVC.initialCurrency = initialCurrency
+            destinationVC.resultCurrency = resultCurrency
         }
     }
 }
@@ -65,9 +77,11 @@ extension MainViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView.tag == 0 {
-            return coinverterManager.inputCurrencyArray[row]
+            initialCurrency = coinverterManager.inputCurrencyArray[row]
+            return initialCurrency
         } else {
-            return coinverterManager.outputCurrencyArray[row]
+            resultCurrency = coinverterManager.outputCurrencyArray[row]
+            return resultCurrency
         }
     }
     
@@ -79,7 +93,6 @@ extension MainViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             let pickerCurrency = coinverterManager.outputCurrencyArray[row]
             coinverterManager.outputCurrency = pickerCurrency
         }
-        coinverterManager.getRates()
     }
 }
 //MARK: - Keyboard hide when tapping around
