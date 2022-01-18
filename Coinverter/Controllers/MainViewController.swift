@@ -39,7 +39,6 @@ class MainViewController: UIViewController {
     
     @IBAction func convertButton(_ sender: UIButton) {
         if amountToConvert.text != "" {
-            coinverterManager.getRates()
             amountToConvertString = amountToConvert.text ?? "0.0"
             coinverterManager.convertCalculations(amountToConvertString)
             performSegue(withIdentifier: "resultSegue", sender: self)
@@ -93,6 +92,7 @@ extension MainViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             let pickerCurrency = coinverterManager.outputCurrencyArray[row]
             coinverterManager.outputCurrency = pickerCurrency
         }
+        coinverterManager.getRates()
     }
 }
 //MARK: - Keyboard hide when tapping around
