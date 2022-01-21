@@ -23,6 +23,7 @@ class MainViewController: UIViewController {
         outputCurrencyPicker.dataSource = self
         
         self.hideKeyboard()
+        coinverterManager.getRates(from: initialCurrency, to: resultCurrency)
         
     }
     
@@ -86,13 +87,13 @@ extension MainViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 0 {
-            let pickerCurrency = coinverterManager.inputCurrencyArray[row]
-            coinverterManager.inputCurrency = pickerCurrency
+            initialCurrency = coinverterManager.inputCurrencyArray[row]
+            //coinverterManager.inputCurrency = initialCurrency
         } else if pickerView.tag == 1 {
-            let pickerCurrency = coinverterManager.outputCurrencyArray[row]
-            coinverterManager.outputCurrency = pickerCurrency
+            resultCurrency = coinverterManager.outputCurrencyArray[row]
+            //coinverterManager.outputCurrency = resultCurrency
         }
-        coinverterManager.getRates()
+        coinverterManager.getRates(from: initialCurrency, to: resultCurrency)
     }
 }
 //MARK: - Keyboard hide when tapping around
