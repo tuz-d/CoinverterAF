@@ -8,11 +8,6 @@
 import Foundation
 import Alamofire
 
-//protocol CoinverterManagerDelegate {
-//    func didUpdatePrice(price: String, currency: String)
-//    func didFailWithError(error: Error)
-//}
-
 class CoinverterManager {
     
     var requestResult: Double = 0.0
