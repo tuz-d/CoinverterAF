@@ -29,7 +29,7 @@
 		0A7546AD2746F6D500E941CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AB982FF2777B824006F3CC9 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		0AF0646B27791D8900FEAA4F /* CoinverterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinverterManager.swift; sourceTree = "<group>"; };
-		E5B86C18279DF3DA00A21436 /* README_APP.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_APP.md; sourceTree = "<group>"; };
+		E5B86C18279DF3DA00A21436 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,7 @@
 		0A7546932746F6D200E941CA = {
 			isa = PBXGroup;
 			children = (
-				E5B86C18279DF3DA00A21436 /* README_APP.md */,
+				E5B86C18279DF3DA00A21436 /* README.md */,
 				0A75469E2746F6D200E941CA /* Coinverter */,
 				0A75469D2746F6D200E941CA /* Products */,
 			);

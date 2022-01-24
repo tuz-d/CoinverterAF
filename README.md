@@ -39,7 +39,7 @@ The app has been designed in order to convert currencies from one to another, mo
 * Adding an ability to save the result of conversation
 * Adding an ability to make a custom user list of currencies
 
->Made by Tuz Dmitry, telegram: [@Dimizzz ](https://t.me/Dimizzz), [email](tuzmitya228@gmail.com), [LinkedIn](https://www.linkedin.com/in/dmitriy-tuz-b63bb1107/)
+>Made by Tuz Dmitry, telegram: [@Dimizzz ](https://t.me/Dimizzz), [email](mailto:tuzmitya228@gmail.com), [LinkedIn](https://www.linkedin.com/in/dmitriy-tuz-b63bb1107/)
 
 
 
