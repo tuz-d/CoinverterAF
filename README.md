@@ -20,6 +20,8 @@
 * Добавление возможности сохранения результатов конвертации
 * Добавление возможности пользовательского выбора нужных валют
 
+## UPD 25.07.2022 API работает только с VPN в России
+
 ## App importance
 
 The app has been designed in order to convert currencies from one to another, more convenient, and faster then ever. Coinverter provides the most relevant currency rates; the user interface is easy to use.
@@ -38,6 +40,8 @@ The app has been designed in order to convert currencies from one to another, mo
 * Design improvements
 * Adding an ability to save the result of conversation
 * Adding an ability to make a custom user list of currencies
+
+UPD 25.07.2022 API works only with VPN in Russia
 
 >Made by Tuz Dmitry, telegram: [@Dimizzz ](https://t.me/Dimizzz), [email](mailto:tuzmitya228@gmail.com), [LinkedIn](https://www.linkedin.com/in/dmitriy-tuz-b63bb1107/)
 
